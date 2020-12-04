@@ -69,11 +69,21 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FrontDesk, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Small Office Starter Libraries\FrontDesk\FrontDesk\bin\x86\Debug\FrontDesk.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -88,6 +98,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactsList.Designer.vb">
+      <DependentUpon>ContactsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ContactsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EnquiriesList.Designer.vb">
       <DependentUpon>EnquiriesList.vb</DependentUpon>
     </Compile>
@@ -109,8 +125,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="StatisticalReports.Designer.vb">
+      <DependentUpon>StatisticalReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticalReports.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisitorsOrIntervieweesList.Designer.vb">
+      <DependentUpon>VisitorsOrIntervieweesList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorsOrIntervieweesList.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ContactsList.resx">
+      <DependentUpon>ContactsList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EnquiriesList.resx">
       <DependentUpon>EnquiriesList.vb</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +150,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatisticalReports.resx">
+      <DependentUpon>StatisticalReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisitorsOrIntervieweesList.resx">
+      <DependentUpon>VisitorsOrIntervieweesList.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
